@@ -7,7 +7,10 @@ const initialState: BasketState = {
 };
 
 // Reducer function with typed actions
-function basketReducer(state: BasketState, action: BasketAction): BasketState {
+export function basketReducer(
+  state: BasketState,
+  action: BasketAction,
+): BasketState {
   switch (action.type) {
     case 'ADD_ITEM':
       return {...state, basket: [...state.basket, action.payload]};
